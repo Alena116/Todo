@@ -5,6 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Desktop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid/>
+        Title="Log In" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="37*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Почта" HorizontalAlignment="Left" Height="25" Margin="502,87,0,0" VerticalAlignment="Top" Width="71" RenderTransformOrigin="0.48,0.211" Grid.Column="1"/>
+        <Button Content="Регистрация" HorizontalAlignment="Left" Margin="504,312,0,0" VerticalAlignment="Top" Height="40" Width="190"
+            FontSize="18" Background="#FFF96060" Foreground="White" BorderBrush="#FFF96060" RenderTransformOrigin="0.504,0.658" Grid.Column="1">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="3 3 10 10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Image Margin="29,21,592,256" Source="/Image2.png" Stretch="Fill" Grid.ColumnSpan="2"/>
+        <Label Content="Добро пожаловать!" HorizontalAlignment="Left" Height="46" Margin="480,34,0,0" FontSize="25"  VerticalAlignment="Top" Width="250" Grid.Column="1"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" Height="25" Margin="502,143,0,0" VerticalAlignment="Top" Width="71" Grid.Column="1"/>
+        <TabControl HorizontalAlignment="Left" Height="4" Margin="504,197,0,0" VerticalAlignment="Top" Width="206" Grid.Column="1"/>
+        <TabControl HorizontalAlignment="Left" Height="4" Margin="502,126,0,0" VerticalAlignment="Top" Width="206" Grid.Column="1"/>
+        <Label Content="Введите пароль" HorizontalAlignment="Left" Height="24" Margin="502,173,0,0" VerticalAlignment="Top" Width="106" Background="White" Foreground="#FF5D5A5A" Grid.Column="1"/>
+        <Label Content="Восстановить пароль" HorizontalAlignment="Left" Height="37" Margin="573,206,0,0" VerticalAlignment="Top" Width="157" FontSize="14" Grid.Column="1"/>
+        <Button Content="Войти" HorizontalAlignment="Left" Margin="504,258,0,0" VerticalAlignment="Top" Height="40" Width="190"
+            FontSize="18" Background="#FFF96060" Foreground="White" BorderBrush="#FFF96060" RenderTransformOrigin="0.504,0.658" Grid.Column="1">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10 10 3 3"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
 </Window>
