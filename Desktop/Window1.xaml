@@ -10,32 +10,70 @@
         <Image Margin="10,23,611,270" Source="/Image2.png" Stretch="Fill"/>
         <Label Content="Welcome back" HorizontalAlignment="Left" Height="46" Margin="517,34,0,0" FontSize="25"  VerticalAlignment="Top" Width="250"/>
         <Label Content="Имя пользователя" HorizontalAlignment="Left" Height="37" Margin="517,80,0,0" VerticalAlignment="Top" Width="157" FontSize="15"/>
-        <TabControl HorizontalAlignment="Left" Height="4" Margin="517,126,0,0" VerticalAlignment="Top" Width="206"/>
-        <Label Content="Введите имя пользователя" HorizontalAlignment="Left" Height="24" Margin="517,102,0,0" VerticalAlignment="Top" Width="160" Background="White" Foreground="#FF5D5A5A"/>
         <Label Content="Ваша почта" HorizontalAlignment="Left" Height="37" Margin="521,135,0,0" VerticalAlignment="Top" Width="156" FontSize="15"/>
-        <TabControl HorizontalAlignment="Left" Height="4" Margin="517,172,0,0" VerticalAlignment="Top" Width="206"/>
-        <Label Content="Пароль" HorizontalAlignment="Left" Height="37" Margin="519,181,0,0" VerticalAlignment="Top" Width="158" FontSize="15"/>
-        <TabControl HorizontalAlignment="Left" Height="4" Margin="517,242,0,0" VerticalAlignment="Top" Width="206"/>
-        <Label Content="Введите пароль" HorizontalAlignment="Left" Height="24" Margin="516,0,0,0" VerticalAlignment="Center" Width="157" Background="White" Foreground="#FF5D5A5A"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" Height="33" Margin="524,188,0,0" VerticalAlignment="Top" Width="153" FontSize="15"/>
         <Label Content="Повторите пароль" HorizontalAlignment="Left" Height="37" Margin="516,251,0,0" VerticalAlignment="Top" Width="157" FontSize="15" RenderTransformOrigin="0.531,0.825"/>
-        <Label Content="Повторите пароль" HorizontalAlignment="Left" Height="24" Margin="517,288,0,0" VerticalAlignment="Top" Width="157" Background="White" Foreground="#FF5D5A5A" RenderTransformOrigin="0.535,-0.116"/>
-        <TabControl HorizontalAlignment="Left" Height="4" Margin="517,317,0,0" VerticalAlignment="Top" Width="206"/>
-        <Button Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="519,336,0,0" VerticalAlignment="Top" Height="40" Width="190"
-            FontSize="18" Background="#FFF96060" Foreground="White" BorderBrush="#FFF96060" RenderTransformOrigin="0.504,0.658">
+        <Button x:Name="SubmitButton" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="519,336,0,0" VerticalAlignment="Top" Height="40" Width="190"
+            FontSize="18" Background="#FFF96060" Foreground="White" BorderBrush="#FFF96060" RenderTransformOrigin="0.504,0.658" Click="SubmitButton_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10 10 3 3"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Назад" HorizontalAlignment="Left" Margin="519,381,0,0" VerticalAlignment="Top" Height="40" Width="190"
-            FontSize="18" Background="#FFF96060" Foreground="White" BorderBrush="#FFF96060" RenderTransformOrigin="0.504,0.658">
+        <Button x:Name="CloseButton" Content="Назад" HorizontalAlignment="Left" Margin="519,381,0,0" VerticalAlignment="Top" Height="40" Width="190"
+            FontSize="18" Background="#FFF96060" Foreground="White" BorderBrush="#FFF96060" RenderTransformOrigin="0.504,0.658" Click="CloseButton_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="3 3 10 10"/>
                 </Style>
             </Button.Resources>
         </Button>
+        <Border BorderBrush="#FF959090" BorderThickness="1" Margin="521,138,105,311" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+        <Border BorderBrush="#FF959090" BorderThickness="1" Margin="526,181,103,268" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+        <Border BorderBrush="#FF959090" BorderThickness="1" Margin="523,234,105,214" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+        <Border BorderBrush="#FF959090" BorderThickness="1" Margin="524,299,105,149" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Margin="526,120,0,0" TextWrapping="Wrap" Text="Введите имя пользователя" VerticalAlignment="Top" Width="169" BorderBrush="White" Foreground="#FF959090"/>
+        <TextBox x:Name="EmailTextBox" HorizontalAlignment="Left" Margin="527,163,0,0" TextWrapping="Wrap" Text="exam@yandex.ru" VerticalAlignment="Top" Width="162" BorderBrush="White" Foreground="#FF959090" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="PasswordBox1" HorizontalAlignment="Left" Margin="527,0,0,0" TextWrapping="Wrap" Text="Введите пароль" VerticalAlignment="Center" Width="162" BorderBrush="White" Foreground="#FF959090"/>
+        <TextBox x:Name="PasswordBox2" HorizontalAlignment="Left" Margin="523,281,0,0" TextWrapping="Wrap" Text="Повторите пароль" VerticalAlignment="Top" Width="172" BorderBrush="White" Foreground="#FF959090" TextChanged="TextBox_TextChanged_1"/>
 
     </Grid>
 </Window>
+    

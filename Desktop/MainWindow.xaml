@@ -13,7 +13,7 @@
         </Grid.ColumnDefinitions>
         <Label Content="Почта" HorizontalAlignment="Left" Height="25" Margin="502,87,0,0" VerticalAlignment="Top" Width="71" RenderTransformOrigin="0.48,0.211" Grid.Column="1"/>
         <Button Content="Регистрация" HorizontalAlignment="Left" Margin="504,312,0,0" VerticalAlignment="Top" Height="40" Width="190"
-            FontSize="18" Background="#FFF96060" Foreground="White" BorderBrush="#FFF96060" RenderTransformOrigin="0.504,0.658" Grid.Column="1">
+            FontSize="18" Background="#FFF96060" Foreground="White" BorderBrush="#FFF96060" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Click="Button_Click_2">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="3 3 10 10"/>
@@ -23,17 +23,56 @@
         <Image Margin="29,21,592,256" Source="/Image2.png" Stretch="Fill" Grid.ColumnSpan="2"/>
         <Label Content="Добро пожаловать!" HorizontalAlignment="Left" Height="46" Margin="480,34,0,0" FontSize="25"  VerticalAlignment="Top" Width="250" Grid.Column="1"/>
         <Label Content="Пароль" HorizontalAlignment="Left" Height="25" Margin="502,143,0,0" VerticalAlignment="Top" Width="71" Grid.Column="1"/>
-        <TabControl HorizontalAlignment="Left" Height="4" Margin="504,197,0,0" VerticalAlignment="Top" Width="206" Grid.Column="1"/>
-        <TabControl HorizontalAlignment="Left" Height="4" Margin="502,126,0,0" VerticalAlignment="Top" Width="206" Grid.Column="1"/>
-        <Label Content="Введите пароль" HorizontalAlignment="Left" Height="24" Margin="502,173,0,0" VerticalAlignment="Top" Width="106" Background="White" Foreground="#FF5D5A5A" Grid.Column="1"/>
         <Label Content="Восстановить пароль" HorizontalAlignment="Left" Height="37" Margin="573,206,0,0" VerticalAlignment="Top" Width="157" FontSize="14" Grid.Column="1"/>
         <Button Content="Войти" HorizontalAlignment="Left" Margin="504,258,0,0" VerticalAlignment="Top" Height="40" Width="190"
-            FontSize="18" Background="#FFF96060" Foreground="White" BorderBrush="#FFF96060" RenderTransformOrigin="0.504,0.658" Grid.Column="1">
+            FontSize="18" Background="#FFF96060" Foreground="White" BorderBrush="#FFF96060" RenderTransformOrigin="0.504,0.658" Grid.Column="1" Click="Button_Click_1">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10 10 3 3"/>
                 </Style>
             </Button.Resources>
         </Button>
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="167,205,0,0" VerticalAlignment="Top" FontSize="18" Grid.Column="1" Height="0" RenderTransformOrigin="0.5,0.5" Width="144">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Border BorderBrush="#FF959090" BorderThickness="1" Margin="190,204,308,230" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+        <Border BorderBrush="#FF959090" BorderThickness="1" Margin="504,143,60,289" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+        <Border BorderBrush="#FF959090" BorderThickness="1" Margin="503,196,57,236" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+        <TextBox x:Name="email" HorizontalAlignment="Left" Margin="509,120,0,0" TextWrapping="Wrap" Text="Введите почту" VerticalAlignment="Top" Width="171" BorderBrush="White" Foreground="#FF959090" TextChanged="email_TextChanged" Grid.Column="1" Height="23"/>
+        <TextBox HorizontalAlignment="Left" Margin="508,168,0,0" TextWrapping="Wrap" Text="Введите пароль" VerticalAlignment="Top" Width="172" BorderBrush="White" Foreground="#FF959090" Grid.Column="1" Height="25"/>
     </Grid>
 </Window>
