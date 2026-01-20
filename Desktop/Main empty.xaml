@@ -10,7 +10,7 @@
         <Label Content="Добро пожаловать!" HorizontalAlignment="Left" Height="46" Margin="239,78,0,0" FontSize="25"  VerticalAlignment="Top" Width="250"/>
         <Label Content="Создайте свою первую &#xD;&#xA;задачу!" HorizontalAlignment="Left" Height="76" Margin="239,141,0,0" FontSize="25"  VerticalAlignment="Top" Width="384"/>
         <Button x:Name="CreateTaskButton" Content="Создать первую задачу" HorizontalAlignment="Center" Margin="0,298,0,0" VerticalAlignment="Top" Height="35" Width="212"
-            FontSize="18" Background="#FFF96060" Foreground="White" BorderBrush="#FFF96060" RenderTransformOrigin="0.504,0.658">
+            FontSize="18" Background="#FFF96060" Foreground="White" BorderBrush="#FFF96060" RenderTransformOrigin="0.504,0.658" Click="CreateTaskButton_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="8 8 8 8"/>

@@ -54,6 +54,13 @@ namespace Desktop
                 this.Hide();
             }
         }
+
+        private void CreateTaskButton_Click(object sender, RoutedEventArgs e)
+        {
+            Main mainW = new Main();
+            mainW.Show();
+            this.Hide();
+        }
     }
 }
         
