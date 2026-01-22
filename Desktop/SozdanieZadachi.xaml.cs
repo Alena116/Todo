@@ -15,27 +15,23 @@ using System.Windows.Shapes;
 namespace Desktop
 {
     /// <summary>
-    /// Логика взаимодействия для Main.xaml
+    /// Логика взаимодействия для SozdanieZadachi.xaml
     /// </summary>
-    public partial class Main : Window
+    public partial class SozdanieZadachi : Window
     {
-        public Main()
+        public SozdanieZadachi()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            SozdanieZadachi mainW = new SozdanieZadachi();
-            mainW.Show();
-            this.Hide();
+            MessageBox.Show("Событие создано!");
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Istoria mainW = new Istoria();
-            mainW.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

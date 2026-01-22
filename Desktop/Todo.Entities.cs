@@ -95,28 +95,28 @@ public static class UserManager
     }
 }
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        UserManager.RegisterUser("ivanov", "password123", "ivanov@mail.com");
-        UserManager.RegisterUser("petrov", "qwerty789", "petrov@mail.com");
-        UserManager.RegisterUser("sidorova", "secret456", "sidorova@mail.com");
+//public static class Program
+//{
+//    static void Main(string[] args)
+//    {
+//        UserManager.RegisterUser("ivanov", "password123", "ivanov@mail.com");
+//        UserManager.RegisterUser("petrov", "qwerty789", "petrov@mail.com");
+//        UserManager.RegisterUser("sidorova", "secret456", "sidorova@mail.com");
 
-        UserManager.RegisterUser("ivanov", "newpassword", "new@mail.com");
+//        UserManager.RegisterUser("ivanov", "newpassword", "new@mail.com");
 
-        UserManager.LoginUser("ivanov", "password123"); 
-        UserManager.LoginUser("ivanov", "wrongpassword"); 
+//        UserManager.LoginUser("ivanov", "password123"); 
+//        UserManager.LoginUser("ivanov", "wrongpassword"); 
 
-        UserManager.DisplayAllUsers();
-        Console.WriteLine($"Всего пользователей: {UserManager.GetUserCount()}");
+//        UserManager.DisplayAllUsers();
+//        Console.WriteLine($"Всего пользователей: {UserManager.GetUserCount()}");
 
-        User user = UserManager.GetUserInfo("petrov");
-        if (user != null)
-        {
-            Console.WriteLine($"\nИнформация о пользователе petrov:");
-            Console.WriteLine($"Email: {user.Email}");
-            Console.WriteLine($"Дата регистрации: {user.RegistrationDate}");
-        }
-    }
-}
+//        User user = UserManager.GetUserInfo("petrov");
+//        if (user != null)
+//        {
+//            Console.WriteLine($"\nИнформация о пользователе petrov:");
+//            Console.WriteLine($"Email: {user.Email}");
+//            Console.WriteLine($"Дата регистрации: {user.RegistrationDate}");
+//        }
+//    }
+//}
