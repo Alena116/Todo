@@ -17,7 +17,7 @@ namespace Desktop
     /// <summary>
     /// Логика взаимодействия для SozdanieZadachi.xaml
     /// </summary>
-    public partial class SozdanieZadachi : Window
+    public partial class SozdanieZadachi : Page
     {
         public SozdanieZadachi()
         {
@@ -31,7 +31,10 @@ namespace Desktop
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            if (NavigationService != null)
+            {
+                NavigationService.GoBack();
+            }
         }
     }
 }

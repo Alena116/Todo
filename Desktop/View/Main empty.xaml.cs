@@ -17,7 +17,7 @@ namespace Desktop
     /// <summary>
     /// Логика взаимодействия для Main_empty.xaml
     /// </summary>
-    public partial class Main_empty : Window
+    public partial class Main_empty : Page
     {
         public Main_empty()
         {
@@ -49,17 +49,13 @@ namespace Desktop
             if (result == MessageBoxResult.Yes)
             {
                 MessageBox.Show("Выход выполнен успешно!");
-                MainWindow MainW = new MainWindow();
-                MainW.Show();
-                this.Hide();
+                NavigationService.Navigate(new MainWindow());
             }
         }
 
         private void CreateTaskButton_Click(object sender, RoutedEventArgs e)
         {
-            Main mainW = new Main();
-            mainW.Show();
-            this.Hide();
+            NavigationService.Navigate(new Main());
         }
     }
 }

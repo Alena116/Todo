@@ -17,7 +17,7 @@ namespace Desktop
     /// <summary>
     /// Логика взаимодействия для Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Window1 : Page
     {
         public Window1()
         {
@@ -39,9 +39,7 @@ namespace Desktop
             if (ValidateEmail(email) && ValidatePassword(password) && ValidateName(name) && password == password1)
             {
                 MessageBox.Show("Регистрация успешно проведена!");
-                Main_empty MW = new Main_empty();
-                MW.Show();
-                this.Hide();
+                NavigationService.Navigate(new Main_empty());
             }
             else
             {
@@ -84,9 +82,7 @@ namespace Desktop
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow regW = new MainWindow();
-            regW.Show();
-            this.Hide();
+            NavigationService.Navigate(new Istoria());
         }
     }
     }

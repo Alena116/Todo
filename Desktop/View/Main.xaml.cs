@@ -15,13 +15,23 @@ using System.Windows.Shapes;
 namespace Desktop
 {
     /// <summary>
-    /// Логика взаимодействия для Istoria.xaml
+    /// Логика взаимодействия для Main.xaml
     /// </summary>
-    public partial class Istoria : Window
+    public partial class Main : Page
     {
-        public Istoria()
+        public Main()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new SozdanieZadachi());
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Istoria());
         }
     }
 }
